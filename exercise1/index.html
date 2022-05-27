@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div class="container">
+    <div class="card card-body">
+    <input type="text" id="search" placeholder="search">
+    </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Thêm sản phẩm
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thêm sản phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card card-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="type" placeholder="Type" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="price" placeholder="Price" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="quality" placeholder="Quality" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="stautus" placeholder="status"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="index" hidden>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="add">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Sua sản phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card card-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name1" placeholder="Name" required >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="type1" placeholder="Type" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="price1" placeholder="Price" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="quality1" placeholder="Quality" required >
+                        </div>
+                        <div class="form-group">
+                            <textarea id="stautus1" required placeholder="status"></textarea >
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="edit" data-dismiss="modal">Sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    -->
+<table class="table table-striped table-dark">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Tên hàng</th>
+        <th scope="col">Loại hàng</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Số lượng</th>
+        <th scope="col">Status</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+</table>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
